@@ -1,0 +1,13 @@
+<div id="flash-messages flex absolute">
+  <% flash.each do |key, value| %>
+    <% if key.eql? 'error' %>
+      <div class="inline-block z-50 bg-red-50 mb-5 px-3 py-2 rounded-lg font-medium text-red-500" id="alert">
+        <%= value %>
+      </div>
+    <% else %>
+      <div class="inline-block z-50 bg-green-50 mb-5 px-3 py-2 rounded-lg font-medium text-green-500" id="notice">
+        <%= value %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
